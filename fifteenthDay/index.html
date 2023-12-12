@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jswork4.4</title>
+</head>
+<body>
+
+
+  <input type="text" id="counterInput" value="0">
+  <button id="incrementButton">+</button>
+  <button id="decrementButton">-</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Получаем элементы DOM
+      var counterInput = document.getElementById('counterInput');
+      var incrementButton = document.getElementById('incrementButton');
+      var  decrementButton = document.getElementById('decrementButton');
+
+      // Устанавливаем слушатели событий
+      incrementButton.addEventListener('click', function() {
+        // Увеличиваем значение инпута на 1
+        counterInput.value = parseInt(counterInput.value) + 1;
+      });
+
+      decrementButton.addEventListener('click', function() {
+        // Уменьшаем значение инпута на 1
+        counterInput.value = Math.max(parseInt(counterInput.value) - 1, 0);
+      });
+    });
+  </script>
+
+
+</body>
+<script src="app.js"></script>
+</html>

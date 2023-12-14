@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #111;
+    margin: 0;
+}
+
+.christmas-tree {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    animation: treeAnimation 2s infinite;
+}
+
+.tree {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 100px solid green;
+}
+
+.tree-details {
+    width: 20px;
+    height: 30px;
+    background-color: brown;
+    position: absolute;
+    top: 80px;
+    left: 65px;
+}
+
+.lights {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.row-one,
+.row-two {
+    width: 30px;
+    height: 10px;
+    background-color: red;
+    margin: 5px 0;
+}
+
+.balls {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.star {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid yellow;
+}
+
+.shadow {
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    width: 70px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+@keyframes treeAnimation {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}

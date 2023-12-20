@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Загадки</title>
+  <style>
+    .answer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="riddle">
+    <p>Загадка 1: Что можно увидеть с закрытыми глазами?</p>
+    <button onclick="toggleAnswer(1)">Показать ответ</button>
+    <p class="answer" id="answer1">Сны</p>
+  </div>
+
+  <div class="riddle">
+    <p>Загадка 2: Что можно сломать, нажав на него однажды?</p>
+    <button onclick="toggleAnswer(2)">Показать ответ</button>
+    <p class="answer" id="answer2">Обещание</p>
+  </div>
+
+
+</body>
+<script src="app.js"></script>
+</html>

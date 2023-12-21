@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Square</title>
+  <style>
+    #colorSquare {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+      cursor: pointer;
+      text-align: center;
+      line-height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="colorSquare" onclick="changeColor()">Click me!</div>
+
+  <script>
+    function changeColor() {
+      // Генерация рандомного цвета
+      var randomColor = getRandomColor();
+
+      // Получение элемента квадрата
+      var square = document.getElementById('colorSquare');
+
+      // Установка цвета фона
+      square.style.backgroundColor = randomColor;
+
+      // Отображение кода цвета в центре квадрата
+      square.textContent = randomColor;
+    }
+
+    function getRandomColor() {
+      // Генерация рандомного числа для каждого канала цвета (RGB)
+      var red = Math.floor(Math.random() * 256);
+      var green = Math.floor(Math.random() * 256);
+      var blue = Math.floor(Math.random() * 256);
+
+      // Форматирование цвета в формате RGB
+      var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+
+      return randomColor;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор скидок</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Калькулятор скидок</h2>
+
+  <label for="originalPrice">Исходная цена:</label>
+  <input type="number" id="originalPrice" placeholder="Введите цену" />
+
+  <br>
+
+  <label for="discountPercentage">Процент скидки:</label>
+  <input type="number" id="discountPercentage" placeholder="Введите процент скидки" />
+
+  <br>
+
+  <button onclick="calculateDiscount()">Рассчитать скидку</button>
+
+  <br>
+
+  <p id="discountedPrice"></p>
+
+  <script>
+    function calculateDiscount() {
+      var originalPrice = parseFloat(document.getElementById('originalPrice').value);
+      var discountPercentage = parseFloat(document.getElementById('discountPercentage').value);
+
+      if (isNaN(originalPrice) || isNaN(discountPercentage)) {
+        alert('Пожалуйста, введите корректные значения.');
+        return;
+      }
+
+      var discountAmount = (originalPrice * discountPercentage) / 100;
+      var discountedPrice = originalPrice - discountAmount;
+
+      document.getElementById('discountedPrice').innerHTML = 'Цена со скидкой: $' + discountedPrice.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

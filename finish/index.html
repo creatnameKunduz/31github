@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee/Tea Order</title>
+</head>
+<body>
+
+<script>
+  // Объект заказа
+  const order = {
+    items: [],
+    total: 0,
+
+    // Добавление напитка в заказ
+    addItem: function(itemName, price) {
+      this.items.push({ name: itemName, price: price });
+      this.total += price;
+    },
+
+    // Вывод общей суммы заказа
+    displayTotal: function() {
+      console.log(`Total: $${this.total.toFixed(2)}`);
+    }
+  };
+
+  // Пример использования
+  order.addItem("Coffee", 2.5);
+  order.addItem("Tea", 1.8);
+  order.addItem("Latte", 3.0);
+
+  order.displayTotal();
+</script>
+
+</body>
+</html>
